@@ -28,7 +28,9 @@ import 'src/widgets/hero_text.dart';
 import 'src/widgets/null_widget.dart';
 import 'theme.dart';
 
+export 'src/models/sign_data.dart';
 export 'src/models/login_data.dart';
+export 'src/models/signup_data.dart';
 export 'src/providers/sign_messages.dart';
 export 'src/providers/sign_theme.dart';
 
