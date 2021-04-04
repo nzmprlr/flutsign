@@ -622,7 +622,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
       loadingController: _loadingController,
       interval: _nameTextFieldLoadingAnimationInterval,
       labelText: messages.usernameHint,
-      autofillHints: [AutofillHints.username],
+      autofillHints: auth.isSignup ? [AutofillHints.username] : null,
       prefixIcon: Icon(FontAwesomeIcons.solidUserCircle),
       keyboardType: TextInputType.text,
       textInputAction: TextInputAction.next,
