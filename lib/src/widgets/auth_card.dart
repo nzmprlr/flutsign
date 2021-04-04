@@ -617,6 +617,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
   Widget _buildUsernameField(double width, SignMessages messages, Auth auth) {
     return AnimatedTextFormField(
       controller: _usernameController,
+      enabled: auth.isSignup,
       width: width,
       loadingController: _loadingController,
       interval: _nameTextFieldLoadingAnimationInterval,
@@ -628,7 +629,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
       onFieldSubmitted: (value) {
         FocusScope.of(context).requestFocus(_passwordFocusNode);
       },
-      validator: widget.usernameValidator,
+      validator: auth.isSignup ? widget.usernameValidator : null,
       onSaved: (value) => auth.username = value!,
     );
   }
