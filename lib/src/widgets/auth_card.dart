@@ -805,6 +805,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
                   alignment: Alignment.topLeft,
                   color: theme.cardTheme.color,
                   width: cardWidth,
+                  padding: EdgeInsets.only(top: 1),
                   onExpandCompleted: () => _postSwitchAuthController.forward(),
                   child: _buildUsernameField(textFieldWidth, messages, auth),
                 ),
